@@ -1,7 +1,18 @@
-export const memories = [
+import one from "../assets/photos/one.jpg";
+import two from "../assets/photos/two.jpg";
+import three from "../assets/photos/three.jpg";
 
+export const memories = [
     {
-        image:"/memories/photo1.jpg",
+        image: one,
+        date:"A Beautiful Moment",
+        title:"Our First Pic ❤️",
+        description:
+        "Every moment with you becomes a memory.",
+        caption:"Simple moments, unforgettable feelings."
+    },
+    {
+        image: two,
         date:"June 24, 2026",
         title:"The Beginning ❤️",
         description:
@@ -10,30 +21,45 @@ export const memories = [
     },
     
     {
-        image:"/memories/photo2.jpg",
-        date:"A Beautiful Moment",
-        title:"Your Smile",
-        description:
-        "One of my favorite views in this world.",
-        caption:"Your smile is my favorite place."
-    },
-    
-    {
-        image:"/memories/photo3.jpg",
+        image: three,
         date:"Our Little Moment",
         title:"Together",
         description:
-        "Every moment with you becomes a memory.",
-        caption:"Simple moments, unforgettable feelings."
+        "One of my favorite views in this world.",
+        
+        caption:"My favorite chapter is the one with you."
+        
+    },
+
+    {
+        image: three,
+        date:"Our Little Moment",
+        title:"Together",
+        description:
+        "One of my favorite views in this world.",
+        
+        caption:"My favorite chapter is the one with you."
+        
+    },
+    {
+        image: three,
+        date:"Our Little Moment",
+        title:"Together",
+        description:
+        "One of my favorite views in this world.",
+        
+        caption:"My favorite chapter is the one with you."
+        
     },
     
-    {
-        image:"/memories/photo4.jpg",
-        date:"Forever Memories",
-        title:"Us ❤️",
-        description:
-        "More memories waiting to be created.",
-        caption:"My favorite chapter is the one with you."
-    }
+    // {
+    //     image:"/memories/photo4.jpg",
+    //     date:"Forever Memories",
+    //     title:"Us ❤️",
+    //     description:
+    //     "More memories waiting to be created.",
+
+    //     caption:"Your smile is my favorite place."
+    // }
     
     ];
