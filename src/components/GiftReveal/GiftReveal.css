@@ -1,0 +1,382 @@
+/* ==========================================
+   GIFT REVEAL SECTION
+========================================== */
+
+.gift-section {
+
+    position: relative;
+
+    padding: 140px 20px;
+
+    overflow: hidden;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.gift-header {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    margin-bottom: 80px;
+
+}
+
+.gift-header p {
+
+    color: #ffb6d9;
+
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+
+}
+
+.gift-header h2 {
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 5vw, 4.8rem);
+
+    margin-bottom: 20px;
+
+}
+
+.gift-header span {
+
+    color: #d6d6d6;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.gift-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+/* ==========================================
+   GIFT BOX
+========================================== */
+
+.gift-box {
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
+
+    transition: .45s;
+
+}
+
+/* Moon Glow */
+
+.gift-box::before{
+
+content:"";
+
+position:absolute;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:radial-gradient(
+
+circle,
+
+rgba(255,255,255,.20),
+
+transparent 70%
+
+);
+
+opacity:0;
+
+transition:.5s;
+
+}
+
+.gift-box:hover::before{
+
+opacity:1;
+
+}
+
+/* Hover */
+
+.gift-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 40px 90px rgba(0,0,0,.45),
+
+0 0 60px rgba(255,93,168,.18);
+
+}
+
+/* Gift Icon */
+
+.gift-icon{
+
+font-size:90px;
+
+color:#ff72b4;
+
+z-index:2;
+
+transition:.5s;
+
+}
+
+.gift-box:hover .gift-icon{
+
+transform:scale(1.15) rotate(-8deg);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.gift-button{
+
+margin-top:45px;
+
+padding:18px 42px;
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+border-radius:60px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:white;
+
+background:linear-gradient(
+135deg,
+#ff5da8,
+#ff9ec9
+);
+
+box-shadow:
+
+0 20px 50px rgba(255,93,168,.35);
+
+transition:.4s;
+
+}
+
+.gift-button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 30px 60px rgba(255,93,168,.45);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.gift-box{
+
+width:180px;
+
+height:180px;
+
+}
+
+.gift-icon{
+
+font-size:72px;
+
+}
+
+.gift-button{
+
+padding:16px 34px;
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.gift-header h2{
+
+font-size:2.6rem;
+
+}
+
+.gift-header span{
+
+font-size:1rem;
+
+}
+
+}
+
+ /* ===============================
+   Gift Reveal Message
+================================ */
+
+.gift-message{
+
+    max-width:700px;
+
+    margin-top:60px;
+
+    text-align:center;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
+
+}
+
+.gift-message h3{
+
+    color:white;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+}
+
+.gift-message p{
+
+    color:#ececec;
+
+    line-height:2;
+
+    margin-bottom:18px;
+
+    font-size:1.05rem;
+
+}
+
+.gift-message span{
+
+    display:block;
+
+    margin-top:30px;
+
+    color:#ffb6d9;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+.continue-btn{
+
+    margin-top:40px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:16px;
+
+    background:linear-gradient(
+        135deg,
+        #ff5da8,
+        #ff8bc4
+    );
+
+    box-shadow:
+      0 20px 45px rgba(255,93,168,.35);
+
+    transition:.4s;
+
+}
+
+.continue-btn:hover{
+
+transform:translateY(-4px);
+
+}

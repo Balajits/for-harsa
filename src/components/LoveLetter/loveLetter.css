@@ -1,0 +1,167 @@
+/* ========================= */
+
+.love-letter{
+
+  padding:140px 20px;
+
+}
+
+/* ========================= */
+
+.letter-header{
+
+  max-width:750px;
+
+  margin:0 auto 140px;
+
+  text-align:center;
+
+}
+
+.letter-header p{
+
+  color:#ffb6d9;
+
+  letter-spacing:7px;
+
+  font-size:13px;
+
+  margin-bottom:22px;
+
+  text-transform:uppercase;
+
+}
+
+.letter-header h2{
+
+  color:white;
+
+  font-size:clamp(3rem,6vw,5rem);
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-weight:500;
+
+  margin-bottom:25px;
+
+}
+
+.letter-header span{
+
+  color:#cfcfcf;
+
+  font-size:1.2rem;
+
+  line-height:1.8;
+
+}
+
+/* ========================= */
+
+.letter-paper{
+
+  max-width:680px;
+
+  margin:auto;
+
+  background:#fdf8f2;
+
+  border-radius:18px;
+
+  padding:70px;
+
+  box-shadow:
+
+  0 25px 60px rgba(0,0,0,.30);
+
+}
+
+/* ========================= */
+
+.letter-paper h3{
+
+  font-family:"Great Vibes",cursive;
+
+  color:#c84d7d;
+
+  font-size:2.7rem;
+
+  margin-bottom:35px;
+
+}
+
+.letter-paper p{
+
+  color:#545454;
+
+  font-size:1.25rem;
+
+  line-height:2.15;
+
+  font-family:"Cormorant Garamond",serif;
+
+}
+
+/* ========================= */
+
+.signature{
+
+  margin-top:70px;
+
+  text-align:right;
+
+  color:#c84d7d;
+
+  font-size:2rem;
+
+  font-family:"Great Vibes",cursive;
+
+}
+
+/* ========================= */
+
+@media(max-width:768px){
+
+.love-letter{
+
+padding:90px 20px;
+
+}
+
+.letter-header{
+
+margin-bottom:90px;
+
+}
+
+.letter-paper{
+
+padding:40px 28px;
+
+}
+
+.letter-paper h3{
+
+font-size:2rem;
+
+}
+
+.letter-paper p{
+
+font-size:1.08rem;
+
+line-height:2;
+
+}
+
+.signature{
+
+font-size:1.7rem;
+
+}
+
+}
+
+.white {
+  color: #000 !important;
+}

@@ -1,69 +1,42 @@
 import { useState } from "react";
-import LoadingScreen from "./components/LoadingScreen";
-import SecretGate from "./components/SecretGate";
-import Hero from "./components/Hero";
-import LoveLetter from "./components/LoveLetter";
-import Timeline from "./components/Timeline";
-import CinematicGallery from "./components/CinematicGallery";
-import PhotoGrid from "./components/PhotoGrid";
-import PolaroidCards from "./components/PolaroidCards";
-import LoveReasons from "./components/LoveReasons";
-import GiftReveal from "./components/GiftReveal";
-import FinalMessage from "./components/FinalMessage";
-function App() {
 
+import Background from "./components/Background/Background";
+import Welcome from "./components/Welcome/Welcome";
+import SecretGate from "./components/SecretGate/SecretGate";
+import Hero from "./components/Hero/Hero";
+import LoveLetter from "./components/LoveLetter/LoveLetter";
+import Timeline from "./components/Timeline/Timeline";
+import Gallery from "./components/Gallery/Gallery";
+import LoveReasons from "./components/LoveReasons/LoveReasons";
+import GiftReveal from "./components/GiftReveal/GiftReveal";
+import FinalMessage from "./components/FinalMessage/FinalMessage";
 
-  const [loading, setLoading] = useState(true);
-
-  const [unlock, setUnlock] = useState(false);
-
-
-
-  setTimeout(() => {
-
-    setLoading(false)
-
-  }, 3000);
-
-
-
-  if (loading)
-    return <LoadingScreen />
-
-
-  if (!unlock)
-    return <SecretGate onUnlock={() => setUnlock(true)} />
-
+export default function App() {
+  const [stage, setStage] = useState("hero");
 
   return (
-
-    <div>
-
-      <Hero />
-
-      <LoveLetter />
-      <Timeline />
-
+    <>
+      <Background />
       
+      {stage === "welcome" && (
+        <Welcome onBegin={() => setStage("secret")} />
+      )}
+
+      {stage === "secret" && (
+        <SecretGate onUnlock={() => setStage("hero")} />
+      )}
+
+      {stage === "hero" && <Hero />}
 
 
-<CinematicGallery />
-
-<PhotoGrid />
-
-<PolaroidCards />
-<LoveReasons />
-
-<GiftReveal />
-<FinalMessage />
+      {stage === "hero" && <Timeline />}
+      {stage === "hero" && <Gallery />}
+      {stage === "hero" && <LoveReasons />} 
+      {stage === "hero" && <LoveLetter />}
+      {stage === "hero" && <GiftReveal />}
+      {stage === "hero" && <FinalMessage />}
 
 
-    </div>
-
-  )
-
-
+    </>
+  );
 }
-
-
-export default App;

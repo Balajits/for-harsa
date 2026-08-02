@@ -1,0 +1,212 @@
+/* ==========================================
+   TIMELINE SECTION
+========================================== */
+
+.timeline-section {
+    position: relative;
+    padding: 120px 20px;
+  }
+  
+  .timeline-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 100px;
+  }
+  
+  .timeline-header p {
+    color: #9ca3af;
+    letter-spacing: 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-header h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-header span {
+    color: #cfcfcf;
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+  
+  /* ==========================================
+     TIMELINE
+  ========================================== */
+  
+  .timeline {
+    position: relative;
+    width: min(1200px, 95%);
+    margin: auto;
+  }
+  
+  /* Vertical Line */
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      #ff5da8,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+  }
+  
+  /* ==========================================
+     CARD
+  ========================================== */
+  
+  .timeline-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
+    align-items: center;
+    margin-bottom: 140px;
+  }
+  
+  /* ---------- IMAGE ---------- */
+  
+  .timeline-image {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .timeline-image img {
+    width: 100%;
+    max-width: 360px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 24px;
+  
+    transition: all .5s ease;
+  
+    box-shadow:
+      0 20px 45px rgba(0,0,0,.35);
+  }
+  
+  .timeline-image img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow:
+      0 25px 60px rgba(255,93,168,.25);
+  }
+  
+  /* ---------- DOT ---------- */
+  
+  .timeline-dot {
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    border-radius: 50%;
+  
+    background: #ff5da8;
+  
+    box-shadow:
+      0 0 18px #ff5da8,
+      0 0 35px rgba(255,93,168,.5);
+  }
+  
+  /* ---------- CONTENT ---------- */
+  
+  .timeline-content {
+    grid-column: 3;
+    padding-left: 40px;
+    max-width: 420px;
+  }
+  
+  .timeline-content span {
+    display: block;
+    color: #ffb8d8;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-content h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+  
+  .timeline-content p {
+    color: #d4d4d4;
+    line-height: 1.9;
+  }
+  
+  /* ==========================================
+     REVERSE CARD
+  ========================================== */
+  
+  .timeline-card.reverse .timeline-image {
+    grid-column: 3;
+  }
+  
+  .timeline-card.reverse .timeline-content {
+    grid-column: 1;
+    text-align: right;
+    padding-right: 40px;
+    padding-left: 0;
+    margin-left: auto;
+  }
+  
+  /* ==========================================
+     RESPONSIVE
+  ========================================== */
+  
+  @media (max-width: 900px) {
+  
+    .timeline-line {
+      left: 22px;
+      transform: none;
+    }
+  
+    .timeline-card {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+  
+    .timeline-dot {
+      grid-column: 1;
+      grid-row: 1;
+      margin-top: 20px;
+    }
+  
+    .timeline-image,
+    .timeline-card.reverse .timeline-image {
+      grid-column: 2;
+      justify-content: flex-start;
+    }
+  
+    .timeline-content,
+    .timeline-card.reverse .timeline-content {
+      grid-column: 2;
+      text-align: left;
+      padding: 0;
+      margin: 20px 0 0;
+      max-width: 100%;
+    }
+  
+    .timeline-image img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  
+    .timeline-header h2 {
+      font-size: 2.6rem;
+    }
+  
+    .timeline-header span {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,443 @@
+/* ==========================================
+   LOVE REASONS SECTION
+========================================== */
+
+.reasons-section {
+    position: relative;
+    padding: 120px 20px;
+  }
+  
+  .reasons-header {
+    max-width: 850px;
+    margin: 0 auto 90px;
+    text-align: center;
+  }
+  
+  .reasons-header p {
+    color: #ffb6d9;
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  
+  .reasons-header h2 {
+    color: #fff;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+  
+  .reasons-header span {
+    color: #d5d5d5;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  /* ==========================================
+     GRID
+  ========================================== */
+  
+  .reasons-grid {
+    max-width: 1250px;
+    margin: auto;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+  
+  /* ==========================================
+     CARD
+  ========================================== */
+  
+  .love-card {
+  
+    position: relative;
+  
+    overflow: hidden;
+  
+    border-radius: 28px;
+  
+    background: rgba(255,255,255,.05);
+  
+    border: 1px solid rgba(255,255,255,.08);
+  
+    backdrop-filter: blur(14px);
+  
+    transition: all .45s ease;
+  
+    cursor: pointer;
+  
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+  
+  }
+  
+  /* Glow */
+  
+  .love-glow{
+  
+  position:absolute;
+  
+  top:-120px;
+  
+  right:-120px;
+  
+  width:260px;
+  
+  height:260px;
+  
+  border-radius:50%;
+  
+  background:
+  
+  radial-gradient(circle,
+  
+  rgba(255,255,255,.25),
+  
+  transparent 70%);
+  
+  opacity:0;
+  
+  transition:.5s;
+  
+  pointer-events:none;
+  
+  }
+  
+  .love-card:hover .love-glow{
+  
+  opacity:1;
+  
+  }
+  
+  /* ==========================================
+     IMAGE
+  ========================================== */
+  
+  .love-image{
+  
+  height:280px;
+  
+  overflow:hidden;
+  
+  }
+  
+  .love-image img{
+  
+  width:100%;
+  
+  height:100%;
+  
+  object-fit:cover;
+  
+  display:block;
+  
+  transition:
+  
+  transform .7s ease,
+  
+  filter .7s ease;
+  
+  }
+  
+  .love-card:hover img{
+  
+  transform:scale(1.08);
+  
+  filter:brightness(1.08);
+  
+  }
+  
+  /* ==========================================
+     CONTENT
+  ========================================== */
+  
+  .love-content{
+  
+  padding:28px;
+  
+  }
+  
+  .heart-circle{
+  
+  width:52px;
+  
+  height:52px;
+  
+  border-radius:50%;
+  
+  display:flex;
+  
+  justify-content:center;
+  
+  align-items:center;
+  
+  background:rgba(255,255,255,.08);
+  
+  border:1px solid rgba(255,255,255,.12);
+  
+  color:#ff5da8;
+  
+  font-size:18px;
+  
+  margin-bottom:20px;
+  
+  transition:.4s;
+  
+  }
+  
+  .love-card:hover .heart-circle{
+  
+  transform:scale(1.15);
+  
+  animation:heartbeat 1s infinite;
+  
+  }
+  
+  .love-content h3{
+  
+  color:white;
+  
+  font-size:1.8rem;
+  
+  font-family:"Cormorant Garamond", serif;
+  
+  margin-bottom:15px;
+  
+  }
+  
+  .love-content p{
+  
+  color:#d9d9d9;
+  
+  line-height:1.8;
+  
+  font-size:.96rem;
+  
+  }
+  
+  /* ==========================================
+     HOVER
+  ========================================== */
+  
+  .love-card:hover{
+  
+  transform:
+  
+  translateY(-10px);
+  
+  border-color:
+  
+  rgba(255,255,255,.18);
+  
+  box-shadow:
+  
+  0 35px 80px rgba(0,0,0,.45),
+  
+  0 0 60px rgba(255,93,168,.18);
+  
+  }
+  
+  /* ==========================================
+     HEART
+  ========================================== */
+  
+  @keyframes heartbeat{
+  
+  0%{
+  
+  transform:scale(1);
+  
+  }
+  
+  25%{
+  
+  transform:scale(1.18);
+  
+  }
+  
+  50%{
+  
+  transform:scale(1);
+  
+  }
+  
+  75%{
+  
+  transform:scale(1.15);
+  
+  }
+  
+  100%{
+  
+  transform:scale(1);
+  
+  }
+  
+  }
+  
+  /* ==========================================
+     TABLET
+  ========================================== */
+  
+  @media(max-width:992px){
+  
+  .reasons-grid{
+  
+  grid-template-columns:repeat(2,1fr);
+  
+  }
+  
+  }
+  
+  /* ==========================================
+     MOBILE
+  ========================================== */
+  
+  @media(max-width:600px){
+  
+  .reasons-grid{
+  
+  grid-template-columns:1fr;
+  
+  }
+  
+  .love-image{
+  
+  height:240px;
+  
+  }
+  
+  .reasons-header h2{
+  
+  font-size:2.5rem;
+  
+  }
+  
+  .love-content{
+  
+  padding:22px;
+  
+  }
+  
+  .love-content h3{
+  
+  font-size:1.5rem;
+  
+  }
+  
+  }
+
+  /* Flip Card */
+
+.love-card {
+    perspective: 1200px;
+    height: 520px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+  }
+  
+  .love-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+  
+    position: absolute;
+  
+    width: 100%;
+    height: 100%;
+  
+    backface-visibility: hidden;
+  
+    border-radius: 28px;
+  
+    overflow: hidden;
+  
+  }
+  
+  .card-front {
+  
+    background: rgba(255,255,255,.05);
+  
+    border:1px solid rgba(255,255,255,.08);
+  
+  }
+  
+  .card-back {
+  
+    transform: rotateY(180deg);
+  
+    display:flex;
+  
+    flex-direction:column;
+  
+    justify-content:center;
+  
+    align-items:center;
+  
+    text-align:center;
+  
+    padding:40px;
+  
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+  
+    backdrop-filter:blur(20px);
+  
+  }
+  
+  .letter-icon{
+  
+  font-size:42px;
+  
+  margin-bottom:20px;
+  
+  }
+  
+  .card-back h3{
+  
+  color:white;
+  
+  font-family:"Cormorant Garamond", serif;
+  
+  font-size:2rem;
+  
+  margin-bottom:20px;
+  
+  }
+  
+  .card-back p{
+  
+  color:#ececec;
+  
+  line-height:1.8;
+  
+  font-style:italic;
+  
+  margin-bottom:30px;
+  
+  }
+  
+  .card-back span{
+  
+  color:#ffb6d9;
+  
+  font-size:15px;
+  
+  letter-spacing:1px;
+  
+  }
