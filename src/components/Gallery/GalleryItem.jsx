@@ -1,10 +1,22 @@
 import { motion } from "framer-motion";
-import { FaHeart } from "react-icons/fa";
+import { useState } from "react";
 
 export default function GalleryItem({ memory, index }) {
+
+  const [active, setActive] = useState(false);
+
+  const isMobile = window.innerWidth <= 600;
+
+  const handleClick = () => {
+    if (isMobile) {
+      setActive(!active);
+    }
+  };
+
   return (
     <motion.div
-      className={`gallery-item item-${index}`}
+      className={`gallery-item item-${index} ${active ? "active" : ""}`}
+      onClick={handleClick}
       initial={{
         opacity: 0,
         y: 80,
@@ -22,30 +34,20 @@ export default function GalleryItem({ memory, index }) {
         delay: index * 0.15,
       }}
       whileHover={{
-        // y: -10,
         scale: 1.02
-
       }}
     >
+
       <img
         src={memory.image}
         alt={memory.title}
       />
 
-      {/* <div className="gallery-overlay">
-        <h3>{memory.title}</h3>
-        <p>{memory.description}</p>
-      </div> */}
       <div className="moon-glow" />
 
-      {/* Overlay */}
       <div className="gallery-overlay">
 
         <div className="gallery-info">
-
-          {/* <div className="gallery-heart">
-            <FaHeart />
-          </div> */}
 
           <h3>{memory.title}</h3>
 
