@@ -12,7 +12,7 @@ import GiftReveal from "./components/GiftReveal/GiftReveal";
 import FinalMessage from "./components/FinalMessage/FinalMessage";
 
 export default function App() {
-  const [stage, setStage] = useState("hero");
+  const [stage, setStage] = useState("welcome");
 
   return (
     <>
