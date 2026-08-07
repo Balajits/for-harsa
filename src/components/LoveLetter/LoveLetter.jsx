@@ -68,7 +68,7 @@ export default function LoveLetter() {
 
         <div className="signature white">
 
-          Love,
+          With Love,
 
           <br />
 

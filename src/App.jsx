@@ -33,7 +33,7 @@ export default function App() {
       {stage === "hero" && <Gallery />}
       {stage === "hero" && <LoveReasons />} 
       {stage === "hero" && <LoveLetter />}
-      {/* {stage === "hero" && <GiftReveal />} */}
+      {stage === "hero" && <GiftReveal />}
       {stage === "hero" && <FinalMessage />}
 
 

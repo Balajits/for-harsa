@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./secret.css";
 import { CalendarHeart } from "lucide-react";
 
-const correctDate = "2026-06-24";
+const correctDate = "2025-12-19";
 
 const messages = [
   "Hmm... I think your heart remembers our special day ❤️",
@@ -66,7 +66,7 @@ export default function SecretGate({ onUnlock }) {
             <h2>One Little Question</h2>
 
             <p>
-              When did our official story begin?
+            Every Love Story Has One Magical Date!
             </p>
 
             <input
